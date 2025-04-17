@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" type="text/css" href="../static/CSS/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        {{if .LoggedIn}}
+        <a href="/user" style="text-decoration: none;">
+            <p>Connecté en tant que <b>{{.Username}}</b></p>
+        </a>
+        {{else}}
+        <p>Non connecté</p>
+        {{end}}
+    </header>
+
+    <div class="navbar">
+        <h1><a href="/">Vroom Forum</a></h1>
+        <div class="buttons">
+            {{if .LoggedIn}}
+            <a href="/logout"><button>Déconnexion</button></a>
+            {{else}}
+            <a href="/login"><button>Login</button></a>
+            <a href="/signup"><button>Sign up</button></a>
+            {{end}}
+        </div>
+    </div>
+    <h2>Bienvenue sur notre forum dédié aux sports mécaniques, l'endroit idéal pour les passionnés de vitesse et
+        d'adrénaline !</h2>
+
+    <img class="center-img" src="../static/img/Subject.png" alt="Ford GT">
+
+    <div class="boxbox">
+        <div class="post-box">
+
+            <form method="post">
+                <div class="user-box">
+                    <textarea name="title" rows="1" cols="50" placeholder="Votre titre..." required></textarea>
+                    <textarea name="content" rows="4" cols="50" placeholder="Votre message..." required></textarea>
+                </div>
+                <center>
+                    <input type="submit" value="Poster" />
+                    <span></span>
+                </center>
+            </form>
+        </div>
+    </div>
+
+    <div class="sort-form">
+        <form method="get">
+            <label for="sort">Trier par </label>
+            <select name="s" id="sort">
+                <option value="1">réponses</option>
+                <option value="2">récents</option>
+                <option value="3">anciens</option>
+            </select>
+            <input type="submit" value="Trier" />
+        </form>
+    </div>
+
+
+
+    <div class="posts">
+        {{range .Posts}}
+        <div class="post">
+            <p><a href="/topic?t={{.PostID}}">{{.Title}}</a></p>
+            <p class="date-post">De: {{.Username}} - Réponses: {{.NbRep}} - Posté le: {{.DatePost}}</p>
+        </div>
+        {{end}}
+    </div>
+
+
+</body>
+
+</html>

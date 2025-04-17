@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" type="text/css" href="../static/CSS/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/login">Connexion</a>
+    </nav>
+    <div class="container">
+        <h1>Inscription</h1>
+        <form method="post" action="/signup">
+            <label for="username">Nom d'utilisateur:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="password">Mot de passe:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="S'inscrire">
+        </form>
+    </div>
+</body>
+
+</html>

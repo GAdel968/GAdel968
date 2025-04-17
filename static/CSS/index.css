@@ -1,0 +1,267 @@
+body {
+  background-color: #111;
+  color: #FFF;
+  font-family: 'Russo One', sans-serif;
+}
+
+.navbar {
+  background-color: #000;
+  padding: 10px;
+}
+
+.navbar h1 {
+  color: #0F0;
+  margin: 0;
+}
+
+.navbar .buttons {
+  float: right;
+}
+
+.navbar h1 a:link,
+.navbar h1 a:visited {
+  color: #0F0;
+  text-decoration: none;
+}
+
+.navbar h1 a:hover,
+.navbar h1 a:active {
+  color: #0F0;
+}
+
+
+.navbar .buttons button {
+  background-color: #0F0;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+
+.boxbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-box {
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 5px;
+}
+
+.post-box .user-box {
+  position: relative;
+}
+
+.post-box .user-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  resize: none;
+}
+
+.post-box form input {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 20px;
+  letter-spacing: 4px;
+}
+
+.post-box input:hover {
+  background: #03f40f;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03f40f,
+    0 0 25px #03f40f,
+    0 0 50px #03f40f,
+    0 0 100px #03f40f;
+}
+
+.post-box input span {
+  position: absolute;
+  display: block;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.post-box input span:nth-child(1) {
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #03f40f);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.posts {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #222;
+}
+
+.posts .post {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.posts .post:hover {
+  background-color: #444;
+}
+
+.posts .post p {
+  margin: 0;
+  color: #FFF;
+}
+
+.posts .post a:link,
+.posts .post a:visited {
+  color: #0F0;
+  text-decoration: none;
+}
+
+.posts .post a:hover,
+.posts .post a:active {
+  color: #0F0;
+}
+
+.posts .post .date-post {
+  color: #AAA;
+  font-size: 18px;
+  text-align: right;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.post-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  background-color: #222;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .6);
+  padding: 10px;
+  width: 30%;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+
+.post-message form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.post-message textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  resize: none;
+}
+
+.post-message input[type="submit"] {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #03f40f;
+  margin: 20px auto;
+}
+
+.post-message input[type="submit"]:hover {
+  box-shadow: 0 0 5px #03f40f,
+    0 0 25px #03f40f,
+    0 0 50px #03f40f,
+    0 0 100px #03f40f;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.post-message input[type="submit"]:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #03f40f);
+  animation: btn-anim1 2s linear infinite;
+}
+
+
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+
+.sort-form input[type="submit"] {
+  background-color: #03f40f;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.sort-form input[type="submit"]:hover {
+  box-shadow: 0 0 5px #03f40f,
+    0 0 25px #03f40f,
+    0 0 50px #03f40f,
+    0 0 100px #03f40f;
+}
